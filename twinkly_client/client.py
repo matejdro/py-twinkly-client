@@ -49,7 +49,7 @@ class TwinklyClient:
 
     async def set_is_on(self, is_on: bool) -> None:
         """Turn the device on / off."""
-        await self.__send_request(EP_MODE, {"mode": "movie" if is_on else "off"})
+        await self.__send_request(EP_MODE, {"mode": "playlist" if is_on else "off"})
 
     async def get_brightness(self) -> int:
         """Get the current brightness of the device, between 0 and 100."""
